@@ -1,5 +1,21 @@
 -arquivo server.ts
     Rotas - REQ/RES
+    rota = conjunto
+    recurso = usuário
+    Metodos HTTP = GET(Buscar inforamção),POST(criando informação),PUT(editando informação),DELETE(deletar informação)
+- Parâmetros 
+    Query params:http://localhost:3333/users?search=nomeuser
+    Route params:http://localhost:3333/users/1 (identicar um recurso - exemplo id = 1)
+    body:http://localhost:3333/users (identicar um recurso)
+
+app.post('/users/:id', (request, response) => {
+  //return response.send('teste');
+  console.log(request.query);
+  console.log(request.params);
+  console.log(request.body);
+
+  return response.json({ message: 'teste' });
+});
 
 
 TERMINAL
