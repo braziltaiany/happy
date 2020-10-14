@@ -7,7 +7,17 @@ export default {
   async index(request: Request, response: Response) {
     const orphanagesRepository = getRepository(Orphanage);
 
-    const orphanage = await orphanagesRepository.find();
+    const orphanages = await orphanagesRepository.find();
+
+    return response.json(orphanages);
+  },
+
+  async show(request: Request, response: Response) {
+    const { id } = request.params;
+
+    const orphanagesRepository = getRepository(Orphanage);
+
+    const orphanage = await orphanagesRepository.findOneOrFail(id);
 
     return response.json(orphanage);
   },
@@ -25,7 +35,7 @@ export default {
 
     const orphanagesRepository = getRepository(Orphanage);
 
-    const orphanage = orphanagesRepository.create({
+    const orphanages = orphanagesRepository.create({
       name,
       latitude,
       longitude,
@@ -35,8 +45,8 @@ export default {
       open_on_weekends,
     });
 
-    await orphanagesRepository.save(orphanage);
+    await orphanagesRepository.save(orphanages);
 
-    return response.status(201).json(orphanage);
+    return response.status(201).json(orphanages);
   },
 };
