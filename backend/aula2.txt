@@ -11,6 +11,8 @@ Parâmetros
 -banco de dados
     Driver nativo, query builder,ORM
 
+    -migrations
+
 TERMINAL
     Pacotes
 yarn init -y
@@ -21,6 +23,9 @@ yarn tsc --init
 yarn add ts-node-dev -D 
 yarn dev //executa o projeto
 yarn add typeorm sqlite3
+yarn typeorm
+yarn typeorm migration:create -n create_orphanages
+yarn typeorm migration:run
 
 
 
