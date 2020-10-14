@@ -26,6 +26,8 @@ yarn add typeorm sqlite3
 yarn typeorm
 yarn typeorm migration:create -n create_orphanages
 yarn typeorm migration:run
-
+yarn typeorm migration:revert - exclui tabela
+yarn typeorm migration:run
+yarn dev
 
 
