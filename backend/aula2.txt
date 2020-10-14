@@ -3,20 +3,13 @@
     rota = conjunto
     recurso = usuário
     Metodos HTTP = GET(Buscar inforamção),POST(criando informação),PUT(editando informação),DELETE(deletar informação)
-- Parâmetros 
+Parâmetros 
     Query params:http://localhost:3333/users?search=nomeuser
     Route params:http://localhost:3333/users/1 (identicar um recurso - exemplo id = 1)
     body:http://localhost:3333/users (identicar um recurso)
 
-app.post('/users/:id', (request, response) => {
-  //return response.send('teste');
-  console.log(request.query);
-  console.log(request.params);
-  console.log(request.body);
-
-  return response.json({ message: 'teste' });
-});
-
+-banco de dados
+    Driver nativo, query builder,ORM
 
 TERMINAL
     Pacotes
@@ -27,6 +20,7 @@ yarn add typescript -D
 yarn tsc --init
 yarn add ts-node-dev -D 
 yarn dev //executa o projeto
+yarn add typeorm sqlite3
 
 
 
