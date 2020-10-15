@@ -36,6 +36,8 @@ yarn add @types/multer -D
 yarn add express-async-errors //captura de erros
 yarn add yup
 yarn add @types/yup -D
+yarn add cors //funcionamento em qualquer porta
+yarn add @types/cors -D
 
 exemplo:
 {
