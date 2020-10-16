@@ -17,7 +17,7 @@ export default function CreateOrphanage() {
   const [instructions, setInstructions] = useState('');
   const [opening_hours, setOpeningHours] = useState('');
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<File[]>([]);
 
   function handlerMapClick(event: LeafletMouseEvent) {
     //console.log(event);
@@ -42,7 +42,10 @@ export default function CreateOrphanage() {
   }
 
   function handlerSelectImages(event: ChangeEvent<HTMLInputElement>) {
-    console.log(event.target.files);
+    if (!event.target.files) {
+      return;
+    }
+    setImages(Array.from(event.target.files));
   }
 
   return (
