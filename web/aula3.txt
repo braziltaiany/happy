@@ -6,9 +6,11 @@ conectar backend com frontend axios
  yarn add axios
 
 
+
 obs:
 react
  compomente/propriedade/estado
+ chamar uma api: useEffect(()=> {ação},[quando])
     estado 
         const [arrayRetorno, função] = useState([]) - estad começa vazio
 
