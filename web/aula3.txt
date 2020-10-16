@@ -6,7 +6,7 @@ conectar backend com frontend axios
  yarn add axios
 
 
-
+//Venha como se sentir mais à vontade e traga muito amor para dar.
 obs:
 react
  compomente/propriedade/estado

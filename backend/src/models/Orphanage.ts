@@ -31,7 +31,7 @@ export default class Orphanage {
   opening_hours: string;
 
   @Column()
-  open_on_weekends: string;
+  open_on_weekends: boolean;
 
   //relacionamento um orfanato para muitas imagens
   //OnToMany precisa de dois parametros
